@@ -25,23 +25,23 @@ class ProductItemDisplay extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(image: NetworkImage(product.image))),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               product.title,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.green,
@@ -50,15 +50,15 @@ class ProductItemDisplay extends StatelessWidget {
                     children: [
                       Text(
                         product.rating.rate.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 14,
                             color: Colors.white),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.star,
                         size: 18,
                         color: Colors.white,
@@ -68,12 +68,12 @@ class ProductItemDisplay extends StatelessWidget {
                 ),
                 Text(
                   product.category.name.toLowerCase(),
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            SizedBox(height: 10,),
-            Text("\$${product.price}",style: TextStyle(
+            const SizedBox(height: 10,),
+            Text("\$${product.price}",style: const TextStyle(
               fontWeight: FontWeight.bold,fontSize: 20
             ),),
           ],

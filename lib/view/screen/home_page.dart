@@ -2,7 +2,7 @@ import 'package:e_commarce_app_using_getx/controller/getx/getx.dart';
 import 'package:e_commarce_app_using_getx/view/screen/product_item_display.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
