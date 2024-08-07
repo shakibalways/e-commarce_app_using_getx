@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 class ProductController extends GetxController {
   var productItems = <Product>[].obs;
+  var isLoading = true.obs;
 
   @override
   void onInit() {
@@ -13,12 +14,13 @@ class ProductController extends GetxController {
 
   void fetchProducts() async {
     try {
+      isLoading(true);
       var products = await RemoteService.fetchProducts();
       if (products != null) {
         productItems.assignAll(products);
       }
-    } catch (e) {
-      print(e.toString());
+    } finally  {
+      isLoading(false);
     }
   }
 }
